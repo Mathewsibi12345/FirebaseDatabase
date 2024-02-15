@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_employment_managment_system/controllers/auth.dart';
+import 'package:flutter_application_employment_managment_system/views/addemployeepage.dart';
 import 'package:flutter_application_employment_managment_system/views/base.dart';
 import 'package:flutter_application_employment_managment_system/views/signupPage.dart';
 
@@ -72,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 if (message!.contains('Success')) {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => const Home(email: ''),
+                      builder: (context) => const AddEmployeePage(),
                     ),
                   );
                 }
