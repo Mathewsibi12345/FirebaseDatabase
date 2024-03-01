@@ -1,3 +1,7 @@
+
+
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_employment_managment_system/controllers/auth.dart';
 import 'package:flutter_application_employment_managment_system/views/base.dart';
@@ -68,8 +72,8 @@ final TextEditingController _emailController = TextEditingController();
                 // Check if password and confirm password match
                 if (_passwordController.text != _confirmPasswordController.text) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: const Text('Password and Confirm Password do not match.'),
+                    const SnackBar(
+                      content: Text('Password and Confirm Password do not match.'),
                     ),
                   );
                   return;

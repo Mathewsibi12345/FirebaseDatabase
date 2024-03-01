@@ -1,0 +1,123 @@
+// import 'package:flutter/material.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
+
+// // ignore: camel_case_types
+// class emoloyeeadd extends StatefulWidget {
+//   const emoloyeeadd({super.key});
+
+//   @override
+//   State<emoloyeeadd> createState() => _emoloyeeaddState();
+// }
+
+// class _emoloyeeaddState extends State<emoloyeeadd> {
+//   final CollectionReference employees =
+//       FirebaseFirestore.instance.collection('employees');
+//   TextEditingController namecontroller = TextEditingController();
+//   TextEditingController empIDcontroller = TextEditingController();
+//   TextEditingController designationcontroller = TextEditingController();
+//   TextEditingController emailcontroller = TextEditingController();
+//   Future<void> addemployees() async {
+//   try {
+//     final data = {
+//       'designation': designationcontroller.text,
+//       'email': emailcontroller.text,
+//       'name': namecontroller.text,
+//     };
+//     await employees.add(data);
+//     // Optionally, you can show a success message or navigate to another screen.
+//   } catch (e) {
+//     print("Error adding employee: $e");
+//     // Optionally, you can show an error message.
+//   }
+// }
+//   // void addemployees() {
+//   //   final data = {
+//   //     'designation': designationcontroller.text,
+//   //     'email': emailcontroller.text,
+//   //     'name': namecontroller.text
+//   //   };
+
+//   //   employees.add(data);
+//   // }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//         appBar: AppBar(
+//           title: Text('Add Employee'),
+//           backgroundColor: Colors.red,
+//         ),
+//         body: Padding(
+//           padding: EdgeInsets.all(8.0),
+//           // ignore: unnecessary_const
+//           child: Column(
+//             children: [
+//               // TextField(
+//               //   controller: empIDcontroller,
+//               //   decoration: InputDecoration(
+//               //     border: OutlineInputBorder(),
+//               //     labelText: 'Employee ID',
+//               //   ),
+//               // ),
+//               Padding(
+//                 padding: EdgeInsets.all(8.0),
+//                 child: TextField(
+//                   controller: namecontroller,
+//                   decoration: InputDecoration(
+//                     border: OutlineInputBorder(),
+//                     labelText: 'Name',
+//                   ),
+//                 ),
+//               ),
+//               Padding(
+//                 padding: EdgeInsets.all(8.0),
+//                 child: TextField(
+//                   controller: emailcontroller,
+//                   decoration: InputDecoration(
+//                     border: OutlineInputBorder(),
+//                     labelText: 'Email',
+//                   ),
+//                 ),
+//               ),
+//               Padding(
+//                 padding: EdgeInsets.all(8.0),
+//                 child: TextField(
+//                   controller: designationcontroller,
+//                   decoration: InputDecoration(
+//                     border: OutlineInputBorder(),
+//                     labelText: 'Designation',
+//                   ),
+//                 ),
+//               ),
+// //               ElevatedButton(
+// //   onPressed: () async {
+// //     // Disable the button to prevent multiple clicks
+// //     setState(() {});
+
+// //     // Call the asynchronous method
+// //     await addemployees();
+
+// //     // Enable the button after the operation is completed
+// //     setState(() {});
+// //   },
+// //   style: ButtonStyle(
+// //     minimumSize: MaterialStateProperty.all(const Size(double.infinity, 50)),
+// //     backgroundColor: MaterialStateProperty.all(Colors.red),
+// //   ),
+// //   child: const Text("Submit"),
+// // )
+//               ElevatedButton(
+//                   onPressed: () {
+//                     addemployees();
+//                   },
+//                   style: ButtonStyle(
+//                       minimumSize: MaterialStateProperty.all(
+//                           const Size(double.infinity, 50)),
+//                       backgroundColor: MaterialStateProperty.all(Colors.red)),
+//                   child: const Text("Submit")
+//                   )
+//             ],
+//           ),
+//         ));
+//   }
+// }

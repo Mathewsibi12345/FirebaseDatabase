@@ -1,14 +1,16 @@
 
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_employment_managment_system/controllers/auth.dart';
-import 'package:flutter_application_employment_managment_system/views/addemployeepage.dart';
-import 'package:flutter_application_employment_managment_system/views/base.dart';
+import 'package:flutter_application_employment_managment_system/views/firetpage.dart';
 import 'package:flutter_application_employment_managment_system/views/signupPage.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _LoginScreenState createState() => _LoginScreenState();
 }
 
@@ -52,6 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 30.0,
             ),
             ElevatedButton(
+              // ignore: duplicate_ignore
               onPressed: () async {
                 // Set loading state to true when login button is pressed
                 setState(() {
@@ -73,12 +76,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 if (message!.contains('Success')) {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => const AddEmployeePage(),
+                      builder: (context) => const Homeems(),
                     ),
                   );
                 }
 
                 // Show a SnackBar with the login result message
+                
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text(message),
